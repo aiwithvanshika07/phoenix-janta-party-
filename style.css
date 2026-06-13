@@ -15,21 +15,6 @@ body {
   background:
     radial-gradient(circle at top, #19ffd8 0%, transparent 30%),
     linear-gradient(135deg, #050816, #091a3a, #000);
-  position: relative;
-  overflow: hidden;
-}
-
-.hero::before {
-  content: "";
-  position: absolute;
-  width: 300px;
-  height: 300px;
-  background: #00ffe0;
-  filter: blur(120px);
-  opacity: 0.4;
-  top: 20%;
-  left: 10%;
-  animation: float 6s infinite alternate;
 }
 
 nav {
@@ -38,7 +23,6 @@ nav {
   align-items: center;
   padding: 25px 8%;
   background: rgba(0,0,0,0.35);
-  backdrop-filter: blur(10px);
   position: fixed;
   width: 100%;
   z-index: 10;
@@ -161,6 +145,27 @@ button {
   border: 2px solid #ffcc70;
 }
 
+.avatar-letter {
+  width: 120px;
+  height: 120px;
+  margin: 0 auto 15px;
+  border-radius: 50%;
+  background: #00ffe0;
+  color: #050816;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 55px;
+  font-weight: bold;
+  box-shadow: 0 0 25px rgba(0,255,224,0.5);
+}
+
+.no-photo {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
 .ai-section {
   background: linear-gradient(135deg, #001f2f, #050816);
 }
@@ -180,35 +185,11 @@ button {
   color: #00ffe0;
 }
 
-.files ul {
-  list-style: none;
-  max-width: 700px;
-  margin: auto;
-  text-align: left;
-}
-
-.files li {
-  background: rgba(255,255,255,0.08);
-  padding: 15px;
-  margin: 12px 0;
-  border-left: 4px solid #00ffe0;
-  border-radius: 10px;
-}
-
 footer {
   text-align: center;
   padding: 25px;
   background: #000;
   color: #aaa;
-}
-
-@keyframes float {
-  from {
-    transform: translateY(0);
-  }
-  to {
-    transform: translateY(80px);
-  }
 }
 
 @media(max-width: 700px) {
@@ -224,4 +205,4 @@ footer {
   .card img {
     height: 250px;
   }
-                   }
+  }
